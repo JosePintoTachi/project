@@ -1,0 +1,18 @@
+Aves,PT1,Good,Average,Adequate,Average,
+Belenenses,PT1,Adequate,Basic,Fairly Basic,Average
+Boavista,PT1,Great,Great,Good,Above Average
+Braga,PT1,Excelent,Great,Excellent,Established
+Chaves,PT1,Good,Adequate,Adequate,Above Average
+Porto,PT1,Superb,Superb,Excellent,Well Established
+Feirense,PT1,Average,Good,Adequate,Average
+Maritimo,PT1,Good,Average,Adequate,Basic
+Moreirense,PT1,Great,Great,Average,Fairly Basic
+Nacional,PT1,Excellent,Excellent,Adequate,Above Average
+Portimonense,PT1,Good,Adequate,Average,Fairly Basic
+Rio Ave,PT1,Great,Good,Good,Above Average
+Santa Clara,PT1,Adequate,Basic,Fairly Basic,Basic
+Benfica,PT1,State Art,State Art,Excellent,Extensive
+Sporting,PT1,State Art,Superb,Excellent,Extensive
+Tondela,PT1,Average,Adequate,Excellent,Extensive
+Guimaraes,PT1,Excellent,Great,Excellent,Established
+Setubal,PT1,Good,Average,Good,Above Average
