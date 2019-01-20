@@ -1,7 +1,7 @@
-Aves,PT1,Good,Average,Adequate,Average,
+Aves,PT1,Good,Average,Adequate,Average
 Belenenses,PT1,Adequate,Basic,Fairly Basic,Average
 Boavista,PT1,Great,Great,Good,Above Average
-Braga,PT1,Excelent,Great,Excellent,Established
+Braga,PT1,Excellent,Great,Excellent,Established
 Chaves,PT1,Good,Adequate,Adequate,Above Average
 Porto,PT1,Superb,Superb,Excellent,Well Established
 Feirense,PT1,Average,Good,Adequate,Average

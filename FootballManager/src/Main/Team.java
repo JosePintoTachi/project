@@ -1,6 +1,6 @@
 package Main;
 
-public class Team {
+public class Team{
 
     //vars
     private String teamName;
@@ -16,6 +16,8 @@ public class Team {
     private int teamYouthFacilitiesRank;
     private int teamJuniorCoachingRank;
     private int teamYouthRecruitmentRank;
+    
+    private double totalMedias;
 
     //Constructor
     public Team(String teamName, String teamLeagueName, String teamTrainingFacilities, String teamYouthFacilities, String teamJuniorCoaching, String teamYouthRecruitment) {
@@ -25,6 +27,7 @@ public class Team {
         this.teamYouthFacilities = teamYouthFacilities;
         this.teamJuniorCoaching = teamJuniorCoaching;
         this.teamYouthRecruitment = teamYouthRecruitment;
+        totalMedias = 0;
     }
 
     public Team(String teamName, String teamLeagueName, int teamTrainingFacilitiesRank, int teamYouthFacilitiesRank, int teamJuniorCoachingRank, int teamYouthRecruitmentRank) {
@@ -34,6 +37,7 @@ public class Team {
         this.teamYouthFacilitiesRank = teamYouthFacilitiesRank;
         this.teamJuniorCoachingRank = teamJuniorCoachingRank;
         this.teamYouthRecruitmentRank = teamYouthRecruitmentRank;
+        totalMedias = 0;
     }
 
     public String getTeamName() {
@@ -60,6 +64,26 @@ public class Team {
         return teamYouthRecruitment;
     }
 
+    public int getTrainingFacilitiesRank() {
+        return teamTrainingFacilitiesRank;
+    }
+
+    public int getYouthFacilitiesRank() {
+        return teamYouthFacilitiesRank;
+    }
+
+    public int getJuniorCoachingRank() {
+        return teamJuniorCoachingRank;
+    }
+
+    public int getYouthRecruitmentRank() {
+        return teamYouthRecruitmentRank;
+    }
+
+    public double getTeamMedia(){
+        return totalMedias;
+    }
+    
     public void setTeamTrainingFacilitiesRank(int rank) {
         teamTrainingFacilitiesRank = rank;
     }
@@ -76,7 +100,7 @@ public class Team {
         teamYouthRecruitmentRank = rank;
     }
 
-    /*1    Poor
+//1    Poor
 //2    Basic
 //3    Below Average
 //4    Adequate
@@ -85,7 +109,7 @@ public class Team {
 //7    Great
 //8    Superb
 //9    Excellent
-//10  State of the Art*/
+//10  State of the Art
     public void setTrainingFacilitiesRanks(String teamTrainingFacilities) {
         String str = teamTrainingFacilities;
         switch (str) {
@@ -179,25 +203,25 @@ public class Team {
         String str = teamJuniorCoaching;
         switch (str) {
             case "Minimal":
-                setTeamTrainingFacilitiesRank(1);
+                setTeamJuniorCoachingRank(1);
                 break;
             case "Fairly Basic":
-                setTeamTrainingFacilitiesRank(2);
+                setTeamJuniorCoachingRank(2);
                 break;
             case "Average":
-                setTeamTrainingFacilitiesRank(3);
+                setTeamJuniorCoachingRank(3);
                 break;
             case "Adequate":
-                setTeamTrainingFacilitiesRank(4);
+                setTeamJuniorCoachingRank(4);
                 break;
             case "Good":
-                setTeamTrainingFacilitiesRank(5);
+                setTeamJuniorCoachingRank(5);
                 break;
             case "Excellent":
-                setTeamTrainingFacilitiesRank(6);
+                setTeamJuniorCoachingRank(6);
                 break;
             case "Exceptional":
-                setTeamTrainingFacilitiesRank(7);
+                setTeamJuniorCoachingRank(7);
                 break;
         }
     }
@@ -214,32 +238,45 @@ public class Team {
         String str = teamYouthRecruitment;
         switch (str) {
             case "Limited":
-                setTeamTrainingFacilitiesRank(1);
+                setTeamYouthRecruitment(1);
                 break;
             case "Basic":
-                setTeamTrainingFacilitiesRank(2);
+                setTeamYouthRecruitment(2);
                 break;
             case "Fairly Basic":
-                setTeamTrainingFacilitiesRank(3);
+                setTeamYouthRecruitment(3);
                 break;
             case "Average":
-                setTeamTrainingFacilitiesRank(4);
+                setTeamYouthRecruitment(4);
                 break;
             case "Above Average":
-                setTeamTrainingFacilitiesRank(5);
+                setTeamYouthRecruitment(5);
                 break;
             case "Established":
-                setTeamTrainingFacilitiesRank(6);
+                setTeamYouthRecruitment(6);
                 break;
             case "Well Established":
-                setTeamTrainingFacilitiesRank(7);
+                setTeamYouthRecruitment(7);
                 break;
             case "Extensive":
-                setTeamTrainingFacilitiesRank(8);
+                setTeamYouthRecruitment(8);
                 break;
         }
     }
 
+    public double calcRankTeams() {
+        double mediaTrainingFacilitiesRank = getTrainingFacilitiesRank() / 10.0;
+        double mediaYouthFacilitiesRank = getYouthFacilitiesRank() / 10.0;
+        double mediateamJuniorCoachingRank = getJuniorCoachingRank() / 7.0;
+        double mediateamYouthRecruitmentRank = getYouthRecruitmentRank() / 8.0;
+        totalMedias = mediaTrainingFacilitiesRank + mediaYouthFacilitiesRank + mediateamJuniorCoachingRank + mediateamYouthRecruitmentRank;
+        return totalMedias;
+    }
+
+    public String displayTeamRanks() {
+        return ANSI_Color + "Team: " + teamName + "\nTeam League Name: " + teamLeagueName + "\nTraining Facilities Rank: " + teamTrainingFacilitiesRank + "\nTeam Youth Facilities Rank: " + teamYouthFacilitiesRank + "\nTeam Junior Coaching Rank: " + teamJuniorCoachingRank + "\nTeam Youth Recruitment Rank: " + teamYouthRecruitmentRank;
+    }
+    
     @Override
     public String toString() {
         return ANSI_Color + "Team: " + teamName + "\nTeam League Name: " + teamLeagueName + "\nTraining Facilities: " + teamTrainingFacilities + "\nTeam Youth Facilities: " + teamYouthFacilities + "\nTeam Junior Coaching: " + teamJuniorCoaching + "\nTeam Youth Recruitment: " + teamYouthRecruitment + "\n";
