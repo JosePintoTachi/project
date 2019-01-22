@@ -9,8 +9,6 @@ public class Team{
     private String teamYouthFacilities;
     private String teamJuniorCoaching;
     private String teamYouthRecruitment;
-    public static final String ANSI_Color = "\033[32m";
-    //System.out.println(ANSI_RED + "Red");
 
     private int teamTrainingFacilitiesRank;
     private int teamYouthFacilitiesRank;
@@ -274,11 +272,11 @@ public class Team{
     }
 
     public String displayTeamRanks() {
-        return ANSI_Color + "Team: " + teamName + "\nTeam League Name: " + teamLeagueName + "\nTraining Facilities Rank: " + teamTrainingFacilitiesRank + "\nTeam Youth Facilities Rank: " + teamYouthFacilitiesRank + "\nTeam Junior Coaching Rank: " + teamJuniorCoachingRank + "\nTeam Youth Recruitment Rank: " + teamYouthRecruitmentRank;
+        return "Team: " + teamName + "\nTeam League Name: " + teamLeagueName + "\nTraining Facilities Rank: " + teamTrainingFacilitiesRank + "\nTeam Youth Facilities Rank: " + teamYouthFacilitiesRank + "\nTeam Junior Coaching Rank: " + teamJuniorCoachingRank + "\nTeam Youth Recruitment Rank: " + teamYouthRecruitmentRank;
     }
     
     @Override
     public String toString() {
-        return ANSI_Color + "Team: " + teamName + "\nTeam League Name: " + teamLeagueName + "\nTraining Facilities: " + teamTrainingFacilities + "\nTeam Youth Facilities: " + teamYouthFacilities + "\nTeam Junior Coaching: " + teamJuniorCoaching + "\nTeam Youth Recruitment: " + teamYouthRecruitment + "\n";
+        return "Team: " + teamName + "\nTeam League Name: " + teamLeagueName + "\nTraining Facilities: " + teamTrainingFacilities + "\nTeam Youth Facilities: " + teamYouthFacilities + "\nTeam Junior Coaching: " + teamJuniorCoaching + "\nTeam Youth Recruitment: " + teamYouthRecruitment + "\n";
     }
 }

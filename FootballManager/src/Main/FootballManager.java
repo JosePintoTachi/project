@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
  */
 public class FootballManager {
     public static void main(String[] args) throws IOException {
-        String fileName = "C:/Users/fcplo/Documents/NetBeansProjects/FootballManager/project/FootballManager/build/classes/Main/DatabaseFM.txt";
+        String fileName = "C:/Users/José Pinto/git/project/FootballManager/src/Main/DatabaseFM.txt";
         Database database = new Database(fileName);
         database.readFile(StandardCharsets.UTF_8);
     }
